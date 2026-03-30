@@ -6,8 +6,8 @@ $colors: (
         "orange": hsl(34, 97%, 64%),
         "blue": hsl(212, 86%, 64%),
         "grey_500": hsl(234, 12%, 34%),
-        "grey_400": hsl(212, 6%, 44%),
-        "super_lightgray": hsl(0, 3%, 92%),
+        "grey_400": hsl(205, 13%, 66%),
+        "super_lightgray": hsl(0, 0%, 96%),
         "white": hsl(0, 0%, 100%),
         "darkblue": hsl(228, 45%, 44%));
 
@@ -74,7 +74,7 @@ main {
   height: 30dvh;
   background-color: white;
   border-radius: 1rem;
-  box-shadow: 0 10px 1rem var(--grey_400);
+  box-shadow: 0 calc((1rem / 15) * 10) 1rem var(--grey_400);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -113,7 +113,7 @@ footer {
   color: var(--darkblue);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 68rem) {
 
   header h1, .title, .main-description {
     margin-inline: auto;
@@ -124,15 +124,15 @@ footer {
   }
 
   main {
+    width: 65%;
     display: grid;
-    grid-template-rows: repeat(8, 18dvh);
+    grid-template-rows: repeat(8, 17dvh);
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
   .card-container {
-    width: 28dvw;
-    height: 40dvh;
+    height: 18rem;
   }
 
   .supervisor {
