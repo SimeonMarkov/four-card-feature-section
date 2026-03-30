@@ -106,6 +106,8 @@ main {
 }
 
 footer {
+  width: 33%;
+  margin-inline: auto;
   margin-block-start: 5rem;
 }
 
@@ -126,7 +128,7 @@ footer {
   main {
     width: 65%;
     display: grid;
-    grid-template-rows: repeat(8, 17dvh);
+    grid-template-rows: repeat(4, 13dvh);
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
