@@ -1,4 +1,5 @@
 @use "sass:map";
+
 $colors: (
         "red": hsl(0, 78%, 62%),
         "cyan": hsl(180, 62%, 55%),
@@ -9,6 +10,12 @@ $colors: (
         "super_lightgray": hsl(0, 3%, 92%),
         "white": hsl(0, 0%, 100%),
         "darkblue": hsl(228, 45%, 44%));
+
+:root {
+  @each $key, $value in $colors {
+    --#{$key}: #{$value};
+  }
+}
 
 @each $i in $colors {
   .bg-#{nth($i, 1)} {
@@ -25,7 +32,7 @@ $colors: (
 }
 
 body {
-  background-color: map.get($colors, "super_lightgray");
+  background-color: var(--super_lightgray);
 }
 
 header {
@@ -100,12 +107,6 @@ main {
 
 footer {
   margin-block-start: 5rem;
-}
-
-
-.attribution {
-  font-size: calc((11px / 16) * 15);
-  text-align: center;
 }
 
 .attribution a {

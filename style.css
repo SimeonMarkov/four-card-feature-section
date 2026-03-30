@@ -1,3 +1,15 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --grey_500: hsl(234, 12%, 34%);
+  --grey_400: hsl(212, 6%, 44%);
+  --super_lightgray: hsl(0, 3%, 92%);
+  --white: hsl(0, 0%, 100%);
+  --darkblue: hsl(228, 45%, 44%);
+}
+
 .bg-red {
   background: hsl(0, 78%, 62%);
 }
@@ -43,7 +55,7 @@
 }
 
 body {
-  background-color: hsl(0, 3%, 92%);
+  background-color: var(--super_lightgray);
 }
 
 header {
@@ -118,11 +130,6 @@ main {
 
 footer {
   margin-block-start: 5rem;
-}
-
-.attribution {
-  font-size: 10.3125px;
-  text-align: center;
 }
 
 .attribution a {
