@@ -1,0 +1,149 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --grey_500: hsl(234, 12%, 34%);
+    --grey_400: hsl(212, 6%, 44%);
+    --super_lightgray: hsl(0, 3%, 92%);
+    --white: hsl(0, 0%, 100%);
+    --darkblue: hsl(228, 45%, 44%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: calc((1rem / 16) * 15);
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background-color: var(--super_lightgray);
+}
+
+header {
+    width: 90%;
+    margin-inline: auto;
+    margin-block-start: 3rem;
+    display: flex;
+    gap: 0.3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+.main-description {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+main {
+    width: 90dvw;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-block-start: 2.4rem;
+}
+
+.card-container {
+    height: 30dvh;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 10px 1rem var(--grey_400);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.card-container-topline {
+    height: 1dvh;
+    background-color: var(--cyan);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-container-content {
+    width: 90%;
+    margin-inline: auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-container-content h2 {
+    font-size: 1.4rem;
+}
+
+.card-container img {
+    position: absolute;
+    bottom: 20%;
+    right: 2rem;
+}
+
+footer {
+    margin-block-start: 5rem;
+}
+
+
+.attribution {
+    font-size: calc((11px / 16) * 15);
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--darkblue);
+}
+
+@media screen and (min-width: 1024px) {
+
+    header h1, .title, .main-description {
+        margin-inline: auto;
+    }
+
+    .main-description {
+        width: 50%;
+    }
+
+    main {
+        display: grid;
+        grid-template-rows: repeat(8, 18dvh);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    .card-container {
+        width: 28dvw;
+        height: 40dvh;
+    }
+
+    .supervisor {
+        grid-row-start: 2;
+    }
+
+    .teambuilder {
+        grid-column-start: 2;
+    }
+
+    .karma {
+        grid-row-start: 3;
+        grid-column-start: 2;
+    }
+
+    .calculator {
+        grid-row-start: 2;
+        grid-column-start: 3;
+    }
+}
