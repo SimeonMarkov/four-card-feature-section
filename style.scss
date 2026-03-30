@@ -17,9 +17,9 @@ $colors: (
   }
 }
 
-@each $i in $colors {
-  .bg-#{nth($i, 1)} {
-    background: nth($i, 2);
+@each $key, $value in $colors {
+  .bg-#{$key} {
+    background: var(--#{$key});
   }
 }
 
